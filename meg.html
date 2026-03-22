@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEG - ASPADE Ngororero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', sans-serif; background: #f0f7f8; color: #333; line-height:1.6; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #006064, #004d4d);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 { font-size: 36px; margin-bottom: 10px; }
+    header p { font-size: 18px; color: #ffd700; margin-bottom: 20px; }
+
+    /* Hero Image */
+    .hero { width: 100%; max-height: 400px; overflow: hidden; }
+    .hero img { width: 100%; object-fit: cover; }
+
+    /* Main Content */
+    .content { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .intro { text-align: center; margin-bottom: 50px; }
+    .intro h2 { color: #004d4d; font-size: 28px; margin-bottom: 15px; }
+    .intro p { font-size: 18px; color: #555; }
+
+    /* Subjects Section */
+    .subjects { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+    .subject-card {
+      background: white;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .subject-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+    .subject-card img { width: 100%; height: 180px; object-fit: cover; }
+    .subject-card h3 { color: #004d4d; margin: 15px 0; font-size: 22px; }
+    .subject-card p { padding: 0 15px 15px; color: #555; font-size: 16px; }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 20px auto;
+      background: #004d4d;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn:hover { background: #003333; transform: scale(1.05); }
+
+    /* Footer */
+    footer {
+      background: #004d4d;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .subjects { flex-direction: column; align-items: center; }
+      header h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MEG - Mathematics, Economics & Geography</h1>
+  <p>Develop analytical, economic, and environmental awareness skills</p>
+</header>
+
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="MEG Classroom and Study">
+</div>
+
+<div class="content">
+  <div class="intro">
+    <h2>About the MEG Program</h2>
+    <p>The MEG program at ASPADE Ngororero focuses on **Mathematics, Economics, and Geography**, providing students with analytical thinking, a deep understanding of economic systems, and environmental awareness. This prepares students for higher education and careers in business, economics, and global studies.</p>
+  </div>
+
+  <h2 style="text-align:center; color:#004d4d; margin-bottom:30px;">Core Subjects</h2>
+  <div class="subjects">
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/4145199/pexels-photo-4145199.jpeg" alt="Mathematics">
+      <h3>Mathematics</h3>
+      <p>Advanced mathematics courses including algebra, calculus, and statistics to develop problem-solving and logical thinking skills.</p>
+    </div>
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/207689/pexels-photo-207689.jpeg" alt="Economics">
+      <h3>Economics</h3>
+      <p>Learn how markets work, financial literacy, global economics, and decision-making skills to understand real-world economic challenges.</p>
+    </div>
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg" alt="Geography">
+      <h3>Geography</h3>
+      <p>Study the environment, human geography, and sustainable development to build awareness of our world and global issues.</p>
+    </div>
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/256401/pexels-photo-256401.jpeg" alt="Projects & Research">
+      <h3>Projects & Research</h3>
+      <p>Engage in practical projects, data analysis, and field studies to apply knowledge and enhance analytical skills.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;">
+    <a href="C:/Users/theon/asp1.html" class="btn">Back to Home</a>
+  </div>
+</div>
+
+<footer>
+  <p>2026 ASPADE Ngororero International School. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

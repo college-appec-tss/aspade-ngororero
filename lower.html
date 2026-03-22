@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lower Secondary (O-Level) - ASPADE Ngororero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', sans-serif; background: #e8f0fe; color: #333; line-height: 1.6; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4a90e2, #003366);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 { font-size: 36px; margin-bottom: 10px; }
+    header p { font-size: 18px; color: #ffd700; margin-bottom: 20px; }
+
+    /* Hero image */
+    .hero { width: 100%; max-height: 400px; overflow: hidden; }
+    .hero img { width: 100%; object-fit: cover; }
+
+    /* Main Content */
+    .content { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .intro { text-align: center; margin-bottom: 50px; }
+    .intro h2 { color: #003366; font-size: 28px; margin-bottom: 15px; }
+    .intro p { font-size: 18px; color: #555; }
+
+    /* Subjects Section */
+    .subjects { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+    .subject-card {
+      background: white;
+      width: 280px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .subject-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+    .subject-card img { width: 100%; height: 160px; object-fit: cover; }
+    .subject-card h3 { color: #003366; margin: 15px 0; font-size: 22px; }
+    .subject-card p { padding: 0 15px 15px; color: #555; font-size: 16px; }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 20px auto;
+      background: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn:hover { background: #002147; transform: scale(1.05); }
+
+    /* Footer */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .subjects { flex-direction: column; align-items: center; }
+      header h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lower Secondary (O-Level)</h1>
+  <p>Balanced curriculum for young learners to grow academically and socially</p>
+</header>
+
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Lower Secondary Classroom">
+</div>
+
+<div class="content">
+  <div class="intro">
+    <h2>Welcome to the O-Level Program</h2>
+    <p>The Lower Secondary program at ASPADE Ngororero provides a **balanced and engaging curriculum**. Students explore sciences, languages, and humanities while developing **critical thinking, creativity, and teamwork skills**.</p>
+  </div>
+
+  <h2 style="text-align:center; color:#003366; margin-bottom:30px;">Core Subjects</h2>
+  <div class="subjects">
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/256401/pexels-photo-256401.jpeg" alt="Science">
+      <h3>Sciences</h3>
+      <p>Explore Biology, Chemistry, and Physics through fun experiments and hands-on learning.</p>
+    </div>
+
+    <div class="subject-card">
+      <img src="./download.jpg" alt="Languages">
+      <h3>Languages</h3>
+      <p>Develop strong communication skills in English, Kinyarwanda, and other languages to express ideas confidently.</p>
+    </div>
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg" alt="Humanities">
+      <h3>Humanities</h3>
+      <p>Learn History, Geography, and Social Studies to understand the world, cultures, and society.</p>
+    </div>
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg" alt="ICT">
+      <h3>ICT & Coding</h3>
+      <p>Introduction to computing, basic coding, and problem-solving skills for the digital age.</p>
+    </div>
+
+    <div class="subject-card">
+      <img src="https://images.pexels.com/photos/4145045/pexels-photo-4145045.jpeg" alt="Arts & Sports">
+      <h3>Arts & Sports</h3>
+      <p>Encourages creativity, team-building, and physical well-being through art, music, and sports activities.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;">
+    <a href="C:/Users/theon/asp1.html" class="btn">Back to Home</a>
+  </div>
+</div>
+
+<footer>
+  <p>2026 ASPADE Ngororero International School. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
