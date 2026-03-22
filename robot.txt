@@ -1,0 +1,3 @@
+User-agent: *
+Allow: / 
+Sitemap:C:\Users\theon\Desktop\aspade\asp1.xml
