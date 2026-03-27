@@ -5,25 +5,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="This Website Is Aspade School Located in the ngororero district thank you to visit our site for more info access the website via the link or research result">
+    content="Aspade Catalyst Science School in Ngororero District - Explore knowledge on our programs">
   <link href="./robot.txt">
   <meta name="google-site-verification" content="si-0ppxEBrg3Gla-h9QT-iys1ylglCHIRYimhJE8mis" />
-  <title>Aspade Catalyst Science School | explorer more</title>
+  <title>Aspade Catalyst Science School | Explore More</title>
+
   <style>
+    /* ---------- Dark Mode Base ---------- */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: #0d1117;
+      color: #c9d1d9;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     header {
-      background: #002147;
-      color: white;
-      padding: 25px;
+      background: linear-gradient(90deg, #090b10, #0f1117);
+      color: #c9d1d9;
+      padding: 50px 20px 80px 20px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px #58a6ff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #c9d1d9;
+      text-shadow: 0 0 4px #ffa500;
+    }
+
+    /* ---------- Ticker ---------- */
+    .ticker-wrapper {
+      width: 100%;
+      overflow: hidden;
+      border-top: 2px solid orange;
+      border-bottom: 2px solid orange;
+      position: relative;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 5px 0;
+      box-sizing: border-box;
+      margin-top: 20px;
+    }
+
+    .ticker {
+      display: inline-block;
+      white-space: nowrap;
+      animation: tickerMove 20s linear infinite;
+    }
+
+    .ticker span {
+      display: inline-block;
+      margin-right: 50px;
+      font-size: 1.4rem;
+      color: #ff9800;
+      font-family: 'Glorice', cursive;
+      font-weight: bold;
+      text-shadow:
+        0 0 5px #ff9800,
+        0 0 10px #ff9800,
+        0 0 20px #ff6f00,
+        0 0 30px #ff6f00,
+        0 0 40px #ff6f00;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes tickerMove {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes glowPulse {
+      0% {
+        text-shadow: 0 0 5px #ff9800, 0 0 10px #ff9800, 0 0 20px #ff6f00;
+      }
+
+      100% {
+        text-shadow: 0 0 15px #ff9800, 0 0 25px #ff9800, 0 0 40px #ff6f00;
+      }
+    }
+
+    .ticker-wrapper::before,
+    .ticker-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .ticker-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, #0d1117 1%, rgba(13, 17, 23, 0));
+    }
+
+    .ticker-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, #0d1117 1%, rgba(13, 17, 23, 0));
+    }
+
+    /* Pause ticker on hover */
+    .ticker-wrapper:hover .ticker {
+      animation-play-state: paused;
+    }
+
+    /* ---------- Cards ---------- */
     .container {
       display: flex;
       justify-content: space-around;
@@ -32,11 +137,11 @@
     }
 
     .card {
-      background: white;
+      background: #161b22;
       width: 300px;
       margin: 15px;
       border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
       text-align: center;
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
@@ -44,7 +149,7 @@
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 12px 25px rgba(88, 166, 255, 0.7);
     }
 
     .card img {
@@ -58,38 +163,39 @@
     }
 
     .card h2 {
-      color: #002147;
+      color: #58a6ff;
     }
 
     .card p {
-      color: #555;
+      color: #adbac7;
     }
 
     .btn {
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
-      background: #002147;
-      color: white;
-      text-decoration: none;
+      background: #238636;
+      color: #c9d1d9;
       border-radius: 6px;
       transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: #00152e;
+      background: #2ea043;
+      box-shadow: 0 0 20px #2ea043;
       transform: scale(1.05);
     }
 
+    /* ---------- Footer ---------- */
     footer {
       text-align: center;
       padding: 15px;
-      background: #002147;
-      color: white;
+      background: #090b10;
+      color: #c9d1d9;
       margin-top: 20px;
     }
 
-    /* Animation for the new student card */
+    /* ---------- Animation for new student card ---------- */
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -107,7 +213,22 @@
       opacity: 0;
     }
 
-    /* -------------------- Ad-Blocker Overlay -------------------- */
+    /* ---------- Particle Canvas ---------- */
+    #headerParticles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- Overlay ---------- */
     #overlay {
       position: fixed;
       top: 0;
@@ -159,10 +280,18 @@
 <body>
 
   <header>
-    <h1></h1> ASPADE Ngororero</h1>
+    <canvas id="headerParticles"></canvas>
+    <h1>ASPADE Ngororero</h1>
     <p>Explore knowledge on our school</p>
-    <p style="color: orange; font-size: 20px; font-family: glorice;">My name is Dushimirimana Theoneste. I decided
-      to build this website of my previous school because it's like my parents.</p><br><br>
+
+    <div class="ticker-wrapper">
+      <div class="ticker">
+        <span>My name is Dushimirimana Theoneste.</span>
+        <span>I decided to build this website of my previous school because it's like my parents.</span>
+        <span>Explore knowledge on our school and programs we offer.</span>
+        <span>Register now to join Aspade Catalyst Science School!</span>
+      </div>
+    </div>
   </header>
 
   <div class="container">
@@ -216,14 +345,14 @@
     <p>2026 International School. All rights reserved.</p>
   </footer>
 
-  <!-- Privacy-friendly analytics by Plausible -->
+  <!-- Analytics -->
   <script async src="https://plausible.io/js/pa-zZnDtJQLB0w7cVxQf0p8L.js"></script>
   <script>
     window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} };
     plausible.init()
   </script>
 
-  <!-- -------------------- Ad-Blocker Overlay Script -------------------- -->
+  <!-- Overlay Script -->
   <div id="overlay">
     <div class="box">
       <p>Subscribe to our YouTube channel to continue</p>
@@ -236,18 +365,15 @@
   </div>
 
   <script>
-    // Show overlay after 30 seconds
+    // Overlay timer
     setTimeout(() => {
       const overlay = document.getElementById("overlay");
       const skipBtn = document.getElementById("skipBtn");
 
       overlay.style.display = "flex";
-
-      // Disable site interaction
       document.body.style.pointerEvents = "none";
       overlay.style.pointerEvents = "auto";
 
-      // Countdown for skip button
       let timeLeft = 10;
       const countdown = setInterval(() => {
         timeLeft--;
@@ -263,14 +389,114 @@
 
     }, 30000);
 
-    // Unlock function
     function unlockSite() {
       document.getElementById("overlay").style.display = "none";
       document.body.style.pointerEvents = "auto";
     }
 
-    // Optional basic protection
     document.addEventListener("contextmenu", e => e.preventDefault());
+  </script>
+
+  <!-- ---------- Interactive Particles ---------- -->
+  <script>
+    const canvas = document.getElementById('headerParticles');
+    const ctx = canvas.getContext('2d');
+    const header = document.querySelector('header');
+
+    let particlesArray = [];
+    const numberOfParticles = 80;
+    let mouse = { x: null, y: null, radius: 100 };
+
+    function resizeCanvas() {
+      canvas.width = header.offsetWidth;
+      canvas.height = header.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    header.addEventListener('mousemove', function (e) {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+    header.addEventListener('mouseleave', function () {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.color = 'rgba(255, 152, 0, 0.7)';
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x > canvas.width) this.x = 0;
+        if (this.x < 0) this.x = canvas.width;
+        if (this.y > canvas.height) this.y = 0;
+        if (this.y < 0) this.y = canvas.height;
+
+        if (mouse.x && mouse.y) {
+          let dx = this.x - mouse.x;
+          let dy = this.y - mouse.y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < mouse.radius) {
+            let angle = Math.atan2(dy, dx);
+            let force = (mouse.radius - distance) / mouse.radius;
+            this.x += Math.cos(angle) * force * 3;
+            this.y += Math.sin(angle) * force * 3;
+          }
+        }
+      }
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particlesArray = [];
+      for (let i = 0; i < numberOfParticles; i++) {
+        particlesArray.push(new Particle());
+      }
+    }
+    initParticles();
+
+    function connectParticles() {
+      for (let a = 0; a < particlesArray.length; a++) {
+        for (let b = a; b < particlesArray.length; b++) {
+          let dx = particlesArray[a].x - particlesArray[b].x;
+          let dy = particlesArray[a].y - particlesArray[b].y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {
+            ctx.strokeStyle = 'rgba(255,152,0,' + (1 - distance / 100) + ')';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+            ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      connectParticles();
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
   </script>
 
 </body>
