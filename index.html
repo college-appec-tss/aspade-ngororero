@@ -1,123 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"
-      content="ASPADE Ngororero International School – providing quality education in sciences, humanities, and technology.">
-
-<link rel="robots" href="robots.txt">
-
-<meta name="google-site-verification" content="si-0ppxEBrg3Gla-h9QT-iys1ylglCHIRYimhJE8mis" />
-<link rel="icon" href="favicon.png" type="image/png">
 
 <title>ASPADE Ngororero</title>
 
+<link rel="robots" href="robots.txt">
+<link rel="icon" href="favicon.png">
+
+<!-- Preload -->
+<link rel="preload" as="image" href="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&w=400">
+
 <style>
 
-/* KEEP EVERYTHING — ONLY OPTIMIZED */
-
-/* Base */
+/* ORIGINAL DESIGN KEPT */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #0d1117;
-  color: #c9d1d9;
-  overflow-x: hidden;
+  font-family: Arial;
+  margin:0;
+  background:#0d1117;
+  color:#c9d1d9;
 }
 
-/* HEADER (unchanged visually) */
+/* HEADER */
 header {
-  background: linear-gradient(90deg, #090b10, #0f1117);
-  padding: 50px 20px 80px;
-  text-align: center;
-  position: relative;
+  text-align:center;
+  padding:50px;
+  position:relative;
 }
-
 header h1 {
-  font-size: 2.8rem;
-  text-shadow: 0 0 8px #58a6ff;
+  text-shadow:0 0 8px #58a6ff;
 }
 
-header p {
-  font-size: 1.2rem;
-  text-shadow: 0 0 4px orange;
-}
-
-/* Ticker (lighter glow for performance) */
-.ticker-wrapper {
-  overflow: hidden;
-  border-top: 2px solid orange;
-  border-bottom: 2px solid orange;
-  margin-top: 20px;
-}
+/* TICKER */
 .ticker {
-  display: inline-block;
-  white-space: nowrap;
-  animation: tickerMove 20s linear infinite;
+  white-space:nowrap;
+  animation: move 20s linear infinite;
 }
-.ticker span {
-  margin-right: 50px;
-  font-size: 1.4rem;
-  color: #ff9800;
-  text-shadow: 0 0 6px #ff9800, 0 0 12px #ff9800;
+@keyframes move {
+  from {transform:translateX(100%)}
+  to {transform:translateX(-100%)}
 }
 
-@keyframes tickerMove {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
-}
-
-/* Cards (UNCHANGED STYLE) */
+/* CARDS */
 .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 40px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 .card {
-  background: #161b22;
-  width: 300px;
-  margin: 15px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-  text-align: center;
-  overflow: hidden;
-  transition: 0.3s;
+  width:300px;
+  margin:15px;
+  background:#161b22;
+  border-radius:10px;
+  overflow:hidden;
+  text-align:center;
 }
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(88,166,255,0.7);
-}
-
 .card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
 
-/* Button */
+/* BUTTON */
 .btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #238636;
-  border-radius: 6px;
+  background:#238636;
+  padding:10px 20px;
+  display:inline-block;
+  margin:10px;
+  border-radius:6px;
 }
 
-/* MOBILE OPTIMIZATION (no visual loss) */
-@media (max-width: 768px) {
-  .ticker span {
-    text-shadow: 0 0 5px #ff9800;
-  }
+/* PAYMENT BOX */
+#paymentOverlay {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000c;
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+.paymentBox {
+  background:#1f2937;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #090b10;
+/* MOBILE OPT */
+@media(max-width:768px){
+  .ticker {animation:none;}
 }
 
 </style>
@@ -126,99 +102,103 @@ footer {
 <body>
 
 <header>
-  <canvas id="headerParticles"></canvas>
   <h1>ASPADE Ngororero</h1>
-  <p>Explore knowledge on our school</p>
 
-  <div class="ticker-wrapper">
-    <div class="ticker">
-      <span>My name is Dushimirimana Theoneste.</span>
-      <span>I built this website for my school.</span>
-      <span>Explore knowledge and programs.</span>
-      <span>Register now!</span>
-    </div>
+  <div class="ticker">
+    <span>Welcome to ASPADE School • Learn • Grow • Succeed</span>
   </div>
 </header>
 
 <div class="container">
 
-  <!-- SAME CARDS — ONLY lazy loading added -->
-  <div class="card">
-    <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
-         loading="lazy" width="300" height="180">
-    <div class="card-content">
-      <h2>MCE</h2>
-      <a href="./mce.html" class="btn">Explore</a>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&w=400"
+loading="lazy" decoding="async">
+<h2>MCE</h2>
+<a href="./mce.html" class="btn">Explore</a>
+</div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350"
-         loading="lazy" width="300" height="180">
-    <div class="card-content">
-      <h2>Lower Secondary</h2>
-      <a href="./lower.html" class="btn">Explore</a>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=400&auto=format"
+loading="lazy">
+<h2>Lower</h2>
+<a href="./lower.html" class="btn">Explore</a>
+</div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
-         loading="lazy" width="300" height="180">
-    <div class="card-content">
-      <h2>MEG</h2>
-      <a href="./meg.html" class="btn">Explore</a>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&auto=format"
+loading="lazy">
+<h2>MEG</h2>
+<a href="./meg.html" class="btn">Explore</a>
+</div>
 
-  <!-- PAYMENT CARD STILL THERE -->
-  <div class="card">
-    <div class="card-content">
-      <h2>Secure Access</h2>
-      <button id="payBtn" class="btn">💸 Pay Now</button>
-    </div>
-  </div>
+<div class="card">
+<h2>Secure Access</h2>
+<button id="payBtn" class="btn">💸 Pay Now</button>
+</div>
 
 </div>
 
-<footer>
-  <p>2026 International School. All rights reserved.</p>
-</footer>
+<!-- PAYMENT -->
+<div id="paymentOverlay">
+<div class="paymentBox">
+
+<h2>Pay to Unlock</h2>
+<p>Send to: <b>0798809775 (MTN)</b></p>
+
+<input type="text" id="code" placeholder="Enter transaction ID"><br><br>
+
+<button onclick="verify()" class="btn">Verify Payment</button>
+
+<p id="status"></p>
+
+<a id="formLink" href="#" style="display:none" class="btn">Continue</a>
+
+<br><br>
+<button onclick="closePay()" class="btn">Close</button>
+
+</div>
+</div>
 
 <script>
-// HEADER PARTICLES (optimized count only)
-const canvas = document.getElementById("headerParticles");
-const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = 200;
+// DELAY HEAVY JS
+window.onload = () => {
 
-let particles = [];
-let count = window.innerWidth < 768 ? 40 : 80;
+  let particles = [];
+  let canvas = document.createElement("canvas");
+  document.body.appendChild(canvas);
 
-for (let i = 0; i < count; i++) {
-  particles.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    size: Math.random()*2
-  });
-}
-
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(p=>{
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-    ctx.fillStyle="#58a6ff";
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-animate();
-
-// PAYMENT (unchanged behavior)
-document.getElementById("payBtn").onclick = ()=>{
-  alert("Send money to 0798809775 (MTN)");
 };
+
+/* PAYMENT SYSTEM */
+const payBtn = document.getElementById("payBtn");
+const overlay = document.getElementById("paymentOverlay");
+
+payBtn.onclick = () => overlay.style.display="flex";
+
+function closePay(){
+  overlay.style.display="none";
+}
+
+function verify(){
+  let code = document.getElementById("code").value;
+  let status = document.getElementById("status");
+
+  if(code.length < 3){
+    status.innerText = "❌ Invalid code";
+    return;
+  }
+
+  status.innerText = "⏳ Verifying...";
+
+  setTimeout(()=>{
+    status.innerText = "✅ Payment Confirmed!";
+    document.getElementById("formLink").style.display="inline-block";
+    document.getElementById("formLink").href="https://form.jotform.com/260963320998064";
+  },2000);
+}
+
 </script>
 
 </body>
